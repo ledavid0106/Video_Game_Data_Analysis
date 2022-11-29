@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
 
 
-const GameChart = ({}) => {
+const GameChart = ({gamedata}) => {
+
+    const data = [
+        ['Platform', 'Global Sales', {role: "style"}],
+        []
+    ]
+
     return ( 
         <Chart
-            chartType="ScatterChart"
-            data={[["Age", "Weight"], [4, 5.5], [8, 12]]}
+            chartType="ColumnChart"
+            data={data}
             width="100%"
             height="400px"
             legendToggle
