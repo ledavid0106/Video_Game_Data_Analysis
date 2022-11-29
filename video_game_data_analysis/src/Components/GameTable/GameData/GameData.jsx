@@ -25,6 +25,7 @@ const GameData = ({gamedata}) => {
                             <td>{data.year}</td>
                             <td>{data.genre}</td>
                             <td>{data.publisher}</td>
+                            {/* <td>{data.globalsales}  </td> */}
                         </tr>)}
                 </tbody>
             </table>
