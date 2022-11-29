@@ -21,4 +21,9 @@ public class VideoGameService {
     }
 
 
+    public List<VideoGame> getAllVideoGames() {
+        return videoGameRepository.findAll();
+    }
+
+    
 }
