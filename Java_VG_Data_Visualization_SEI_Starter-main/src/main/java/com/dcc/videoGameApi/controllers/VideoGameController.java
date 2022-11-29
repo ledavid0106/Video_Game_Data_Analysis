@@ -29,5 +29,8 @@ public class VideoGameController {
         return service.getAllVideoGames();
     }
 
-
+    @GetMapping("/getById/10")
+    public List <VideoGame> getById() {
+        return service.getByID();
+    }
 }
