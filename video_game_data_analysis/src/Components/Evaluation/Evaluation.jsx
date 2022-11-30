@@ -5,7 +5,7 @@ import randomColor from "randomcolor";
 
 const Evaluation = ({gamedata}) => {
     function getGJSales(){
-        let filteredGames = gamedata.filter(game=>game.year >= 2016);
+        let filteredGames = gamedata.filter(game=>game.year >= 2013);
         let platforms = filteredGames.map(game=> game.platform)
         let distinctPlatform = [...new Set(platforms)]
         let platformArrays = distinctPlatform.map(plat => {
@@ -29,7 +29,7 @@ const Evaluation = ({gamedata}) => {
     return ( 
 
         <div>
-        <h2>Japan Sales Vs Global Sales By Console After 2016</h2> {/* //please center later// */}
+        <h2>Japan Sales Vs Global Sales By Console After 2013</h2> {/* //please center later// */}
         <Chart
             chartType="ColumnChart"
             data={getGJSales()}
