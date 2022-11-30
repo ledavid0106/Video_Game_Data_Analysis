@@ -16,8 +16,11 @@ const GamePage = ({}) => {
         let response = await axios.get(`http://localhost:8080/all`)
         console.log(response)
         setGameData(response.data)
+        const rankAscending = response.data.sort((a, b) => a.game_rank - b.game_rank)
+        setGameData(rankAscending)
+        console.log("here",rankAscending)
     }
-
+    
 
     return ( 
         <div>
