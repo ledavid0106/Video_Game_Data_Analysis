@@ -10,6 +10,7 @@ const GameChart = ({gamedata}) => {
             let distinctPlatform = [...new Set(platforms)]
             let platformArrays = distinctPlatform.map(plat => {
                 let allGamesForPlatform = filteredGames.filter(game=> game.platform == plat)
+                console.log(allGamesForPlatform)
                 let globalSale = 0
                 for (let i = 0; i < allGamesForPlatform.length;i++){
                     globalSale += allGamesForPlatform[i]["globalsales"]
@@ -24,33 +25,12 @@ const GameChart = ({gamedata}) => {
             return data
             
         }
-    // let global = [];
-    // function getGlobalSales(gamedata){
-    //     for (const game of gamedata) {
-    //         const sales = game.globalsales;
-    //         global.push({sales })
-    //     }
-    // }
-    // getGlobalSales();
-    // function getGlobalSales(){
-    //     gamedata.map(data=> 
-    //         global += data.globalsales,
-    //         console.log("here")
-    //         )
-    //     return global
-    // }
-    // getGlobalSales();
 
-    const options = {
-        title:"Global Sales By Console After 2012"
-
-    }
     return ( 
 
         <div>
-
+        <h2>Global Sales By Console After 2012</h2> {/* //please center later// */}
         <Chart
-            options={options}
             chartType="ColumnChart"
             data={getGlobalSales()}
             width="100%"
