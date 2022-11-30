@@ -29,7 +29,7 @@ const Evaluation = ({gamedata}) => {
     return ( 
 
         <div>
-        <h2>Japan Sales Vs Global Sales By Console After 2013</h2> {/* //please center later// */}
+        <h2>Japan Sales Vs Global Sales By Console After 2012</h2> {/* //please center later// */}
         <Chart
             chartType="ColumnChart"
             data={getGJSales()}
