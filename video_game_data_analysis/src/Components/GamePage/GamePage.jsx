@@ -7,7 +7,10 @@ import GameTable from "../GameTable/GameTable";
 const GamePage = ({}) => {
 
     const [gamedata, setGameData] = useState([])
-
+    
+    useEffect(() => {
+        getGameData();
+    }, [])
 
     async function getGameData(){
         let response = await axios.get(`http://localhost:8080/all`)
@@ -15,9 +18,6 @@ const GamePage = ({}) => {
         setGameData(response.data)
     }
 
-    useEffect(() => {
-        getGameData();
-    }, [])
 
     return ( 
         <div>

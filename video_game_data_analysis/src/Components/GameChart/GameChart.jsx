@@ -1,8 +1,29 @@
 import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
-
+import randomColor from "randomcolor";
 
 const GameChart = ({gamedata}) => {
+  
+        function getGlobalSales(){
+            let filteredGames = gamedata.filter(game=>game.year >= 2013);
+            let platforms = filteredGames.map(game=> game.platform)
+            let distinctPlatform = [...new Set(platforms)]
+            let platformArrays = distinctPlatform.map(plat => {
+                let allGamesForPlatform = filteredGames.filter(game=> game.platform == plat)
+                let globalSale = 0
+                for (let i = 0; i < allGamesForPlatform.length;i++){
+                    globalSale += allGamesForPlatform[i]["globalsales"]
+                }
+               return [plat, globalSale, randomColor()]
+            })
+
+            const data = [
+                ['Platform', 'Global Sales in Millions', {role: "style"}],
+                ...platformArrays,
+              ];
+            return data
+            
+        }
     // let global = [];
     // function getGlobalSales(gamedata){
     //     for (const game of gamedata) {
@@ -19,21 +40,19 @@ const GameChart = ({gamedata}) => {
     //     return global
     // }
     // getGlobalSales();
-    const data = [
-        ['Platform', 'Global Sales', {role: "style"}],
-        ["DS", global, "#0000FF"],
-        ["Copper", 8.94, "#b87333"], // RGB value
-        ["Silver", 10.49, "silver"], // English color name
-        ["Gold", 19.3, "gold"],
-        ["Platinum", 21.45, "color: #e5e4e2"], // CSS-style declaration
-      ];
 
+    const options = {
+        title:"Global Sales By Console After 2012"
+
+    }
     return ( 
+
         <div>
 
         <Chart
+            options={options}
             chartType="ColumnChart"
-            data={data}
+            data={getGlobalSales()}
             width="100%"
             height="400px"
             legendToggle
