@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import SpecialChart from "../../SpecialChart/SpecialChart";
 import axios from 'axios';
-import randomColor from "randomcolor";
+
 
 
 const GameData = ({gamedata}) => {
-
-    const [identification, setIdentification] = useState(0)
     const [special, setSpecial] = useState([
         {
             "id": 1,

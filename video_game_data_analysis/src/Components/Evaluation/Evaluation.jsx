@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
 
 const Evaluation = ({gamedata}) => {
+    const options = {
+
+        vAxis: {
+            title: "Millions"
+        }
+    }
     function getGJSales(){
         let filteredGames = gamedata.filter(game=>game.year >= 2013);
         let platforms = filteredGames.map(game=> game.platform)
@@ -35,6 +41,7 @@ const Evaluation = ({gamedata}) => {
             width="100%"
             height="400px"
             legendToggle
+            options={options}
         />
         </div>
      );
