@@ -10,7 +10,7 @@ const GameChart = ({gamedata}) => {
             let distinctPlatform = [...new Set(platforms)]
             let platformArrays = distinctPlatform.map(plat => {
                 let allGamesForPlatform = filteredGames.filter(game=> game.platform == plat)
-                console.log(allGamesForPlatform)
+                // console.log(allGamesForPlatform)
                 let globalSale = 0
                 for (let i = 0; i < allGamesForPlatform.length;i++){
                     globalSale += allGamesForPlatform[i]["globalsales"]

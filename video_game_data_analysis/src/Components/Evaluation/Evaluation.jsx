@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
-import randomColor from "randomcolor";
 
 const Evaluation = ({gamedata}) => {
     function getGJSales(){

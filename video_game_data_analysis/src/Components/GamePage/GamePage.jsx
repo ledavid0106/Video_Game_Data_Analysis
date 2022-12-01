@@ -40,8 +40,9 @@ const GamePage = ({}) => {
         <div>
             <GameChart gamedata={gamedata}/>
             <Evaluation gamedata={gamedata} />
+
             <SearchBar gamedata={gamedata} searchdata={searchdata} setSearchData={setSearchData} getGameData={getGameData}/>
-            <GameTable gamedata={searchdata}/>
+            <GameTable gamedata={searchdata} />
 
         </div>
      );

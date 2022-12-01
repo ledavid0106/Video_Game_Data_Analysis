@@ -1,8 +1,15 @@
+import React, { useState } from "react";
 
 
 
 const GameData = ({gamedata}) => {
 
+    // const [identification, setIdentification] = useState([])
+    // const getData = async (id) => {
+    //     const response = await axios.get(`http://localhost:8080/getById/${id}`)
+    //     setIdentification(response.data)
+    // }
+    
 
     return (  
         <table>
@@ -25,6 +32,7 @@ const GameData = ({gamedata}) => {
                             <td>{data.year}</td>
                             <td>{data.genre}</td>
                             <td>{data.publisher}</td>
+                            {/* <td><button onClick={getData} >Details</button></td> */}
                         </tr>)}
                 </tbody>
             </table>
