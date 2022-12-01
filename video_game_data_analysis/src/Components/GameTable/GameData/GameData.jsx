@@ -7,7 +7,22 @@ import randomColor from "randomcolor";
 const GameData = ({gamedata}) => {
 
     const [identification, setIdentification] = useState(0)
-    const [special, setSpecial] = useState([])
+    const [special, setSpecial] = useState([
+        {
+            "id": 1,
+            "game_rank": 11,
+            "name": "Nintendogs",
+            "platform": "DS",
+            "year": 2005,
+            "genre": "Simulation",
+            "publisher": "Nintendo",
+            "northamericasales": 9.07,
+            "europesales": 11.0,
+            "japansales": 1.93,
+            "othersales": 2.75,
+            "globalsales": 24.76
+        }
+    ])
 
     const handleSubmit = (event) => {
         getSpecialData(event.target.value)
