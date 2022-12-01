@@ -69,7 +69,7 @@ const GameData = ({gamedata}) => {
                             <td>{data.year}</td>
                             <td>{data.genre}</td>
                             <td>{data.publisher}</td>
-                            <td><button type="submit" value={data.id} onClick={handleSubmit}>Details {data.id}</button></td>
+                            <td><button type="submit" value={data.id} onClick={handleSubmit}>Details</button></td>
                         </tr>)}
                 </tbody>
             </table>
