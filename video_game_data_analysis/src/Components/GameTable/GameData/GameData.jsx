@@ -10,15 +10,15 @@ const GameData = ({gamedata}) => {
     const [special, setSpecial] = useState([])
 
     const handleSubmit = (event) => {
-        setIdentification(event.target.value)
-        getSpecialData()
+        getSpecialData(event.target.value)
+
     }
 
     useEffect(()=>{
         getSpecialData();
     },[]);
-    
-    async function getSpecialData(){
+
+    async function getSpecialData(identification){
         let response = await axios.get(`http://localhost:8080/getById/${identification}`)
         console.log(response)
         setSpecial(response.data)
