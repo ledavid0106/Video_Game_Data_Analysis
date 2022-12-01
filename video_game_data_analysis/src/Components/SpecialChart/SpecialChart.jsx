@@ -1,29 +1,30 @@
 
-import React, { useState } from 'react';
+
 import { Chart } from "react-google-charts";
 import randomColor from "randomcolor";
 
-const SpecialChart = ({gamedata}) => {
-    const [special, setSpecial] = useState([])
+
+const SpecialChart = ({special}) => {
 
 
-    useEffect(() => {
 
-    }, [])
-
-    async function getSpecialData(){
-        let response = await axios.get(`http://localhost:8080/getById/${id}`)
-        console.log(response)
-        setSpecial(response.data)
+    function getDetails(){
+        let details = special.map(detail=> {
+            return [detail.name, detail.northamericasales, detail.europesales, detail.japansales, detail.othersales, detail.globalsales, randomColor()]
+        })
+        const data = [
+            ["Name", "North American Sales", "Europe Sales", "Japan Sales", "Other Sales", "Global Sales", {role: "style"}],
+            ...details,
+        ]
+        return data
     }
-
     return ( 
 
         <div>
-        <h2>Global Sales By Console After 2012</h2> {/* //please center later// */}
+        <h2>Game Details</h2> {/* //please center later// */}
         <Chart
             chartType="ColumnChart"
-            data={getGlobalSales()}
+            data={getDetails()}
             width="100%"
             height="400px"
             legendToggle
