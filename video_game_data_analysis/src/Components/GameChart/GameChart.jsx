@@ -3,12 +3,9 @@ import { Chart } from "react-google-charts";
 import randomColor from "randomcolor";
 
 const GameChart = ({gamedata}) => {
-    const options = {
-        legend: "none",
-        vAxis: {
-            title: "Millions"
-        }
-    }
+    const options = {legend: "none", vAxis: {title: "Millions"}}
+
+
         function getGlobalSales(){
             let filteredGames = gamedata.filter(game=>game.year >= 2013);
             let platforms = filteredGames.map(game=> game.platform)
@@ -34,7 +31,7 @@ const GameChart = ({gamedata}) => {
     return ( 
 
         <div>
-        <h2>Global Sales By Console After 2012</h2> {/* //please center later// */}
+        <h2>Global Sales By Console After 2012</h2> 
         <Chart
             chartType="ColumnChart"
             data={getGlobalSales()}
