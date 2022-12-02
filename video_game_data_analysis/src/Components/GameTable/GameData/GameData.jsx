@@ -37,20 +37,6 @@ const GameData = ({gamedata}) => {
         setSpecial(response.data)
     }
 
-<<<<<<< HEAD
-    
-
-    // useEffect(()=>{
-    //     setIdentification(0)
-    //     let response = axios.get(`http://localhost:8080/getById/${identification}`)
-    //     console.log(response.data)
-    //     setSpecial(response.data)
-        
-    // }, )
-
-
-=======
->>>>>>> 8b731574ecd9c6715094ad62cdd5df6855603725
     return (  
         <div>
         <SpecialChart special={special}/>
@@ -63,7 +49,6 @@ const GameData = ({gamedata}) => {
                         <th className='Year'>Year</th> 
                         <th className='Genre'>Genre</th> 
                         <th className="Publisher">Publisher</th>
-                        
                     </tr>
                 </thead>
                 <tbody >
