@@ -19,7 +19,6 @@ const GamePage = ({}) => {
 
     async function getGameData(){
         let response = await axios.get(`http://localhost:8080/all`)
-
         setGameData(response.data)
         const rankAscending = response.data.sort((a, b) => a.game_rank - b.game_rank)
         setGameData(rankAscending)
@@ -38,10 +37,14 @@ const GamePage = ({}) => {
     return ( 
         <div>
             <GameChart gamedata={gamedata}/>
-            <Evaluation gamedata={gamedata} />
-
+            <Evaluation gamedata={gamedata}/>
             <SearchBar gamedata={gamedata} searchdata={searchdata} setSearchData={setSearchData} getGameData={getGameData}/>
+<<<<<<< HEAD
             <GameTable gamedata={searchdata} searchdata={searchdata} setSearchData={setSearchData} getGameData={getGameData}/>
+=======
+            <GameTable gamedata={searchdata}/>
+
+>>>>>>> 8b731574ecd9c6715094ad62cdd5df6855603725
         </div>
      );
 }

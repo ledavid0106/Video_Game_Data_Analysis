@@ -4,10 +4,6 @@ import GameData from "./GameData/GameData";
 
 
 const GameTable = ({gamedata}) => {
-  
-
-
-
     return (
         <div>
             <GameData gamedata={gamedata} />

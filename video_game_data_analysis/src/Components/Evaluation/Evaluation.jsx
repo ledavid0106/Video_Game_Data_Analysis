@@ -1,14 +1,9 @@
-
 import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
 
 const Evaluation = ({gamedata}) => {
-    const options = {
+    const options = {vAxis: {title: "Millions"}}
 
-        vAxis: {
-            title: "Millions"
-        }
-    }
     function getGJSales(){
         let filteredGames = gamedata.filter(game=>game.year >= 2013);
         let platforms = filteredGames.map(game=> game.platform)
@@ -34,7 +29,7 @@ const Evaluation = ({gamedata}) => {
     return ( 
 
         <div>
-        <h2>Japan Sales Vs Global Sales By Console After 2012</h2> {/* //please center later// */}
+        <h2>Japan Sales Vs Global Sales By Console After 2012</h2> 
         <Chart
             chartType="ColumnChart"
             data={getGJSales()}

@@ -37,6 +37,7 @@ const GameData = ({gamedata}) => {
         setSpecial(response.data)
     }
 
+<<<<<<< HEAD
     
 
     // useEffect(()=>{
@@ -48,6 +49,8 @@ const GameData = ({gamedata}) => {
     // }, )
 
 
+=======
+>>>>>>> 8b731574ecd9c6715094ad62cdd5df6855603725
     return (  
         <div>
         <SpecialChart special={special}/>

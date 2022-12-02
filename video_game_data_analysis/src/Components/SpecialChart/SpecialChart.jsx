@@ -3,11 +3,7 @@ import randomColor from "randomcolor";
 
 
 const SpecialChart = ({special}) => {
-    const options = {
-        vAxis: {
-            title: "Millions"
-        }
-    }
+    const options = {vAxis: {title: "Millions"}}
 
     function getDetails(){
         let details = special.map(detail=> {
