@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './SearchBar.css'
 
 
 const SearchBar = ({searchdata, setSearchData, gamedata, getGameData}) => {

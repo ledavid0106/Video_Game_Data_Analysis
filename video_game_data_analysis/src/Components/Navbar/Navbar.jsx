@@ -3,9 +3,9 @@ import './Navbar.css'
 const Navbar = (props) => {
     return (
         <div className='Nav'>
-            <h2>
+            <h1>
                 GAME DATA PRO
-            </h2>
+            </h1>
         </div>
     )
 }

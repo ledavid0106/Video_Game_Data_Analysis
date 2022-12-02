@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Chart } from "react-google-charts";
 import randomColor from "randomcolor";
+import './GameChart.css'
 
 const GameChart = ({gamedata}) => {
     const options = {

@@ -41,8 +41,7 @@ const GamePage = ({}) => {
             <Evaluation gamedata={gamedata} />
 
             <SearchBar gamedata={gamedata} searchdata={searchdata} setSearchData={setSearchData} getGameData={getGameData}/>
-            <GameTable gamedata={searchdata} />
-
+            <GameTable gamedata={searchdata} searchdata={searchdata} setSearchData={setSearchData} getGameData={getGameData}/>
         </div>
      );
 }

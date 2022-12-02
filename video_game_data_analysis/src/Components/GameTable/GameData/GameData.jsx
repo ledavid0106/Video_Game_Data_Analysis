@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SpecialChart from "../../SpecialChart/SpecialChart";
 import axios from 'axios';
-
+import './GameData.css'
 
 
 const GameData = ({gamedata}) => {
@@ -37,6 +37,8 @@ const GameData = ({gamedata}) => {
         setSpecial(response.data)
     }
 
+    
+
     // useEffect(()=>{
     //     setIdentification(0)
     //     let response = axios.get(`http://localhost:8080/getById/${identification}`)
@@ -49,26 +51,27 @@ const GameData = ({gamedata}) => {
     return (  
         <div>
         <SpecialChart special={special}/>
-        <table>
-                <thead>
-                    <tr>
+        <table className="Container">
+                <thead className="headers">
+                    <tr >
                         <th className="GameRank">Game Rank</th>
                         <th className='Name'>Name</th>
                         <th className='Platform'>Platform</th> 
                         <th className='Year'>Year</th> 
                         <th className='Genre'>Genre</th> 
                         <th className="Publisher">Publisher</th>
+                        
                     </tr>
                 </thead>
-                <tbody className='Body'>
+                <tbody >
                     {gamedata.map(data => 
-                        <tr key={data.id}>
-                            <td>{data.game_rank}</td>
-                            <td>{data.name}</td>
-                            <td>{data.platform}</td>
-                            <td>{data.year}</td>
-                            <td>{data.genre}</td>
-                            <td>{data.publisher}</td>
+                        <tr className='Body' key={data.id}>
+                            <td className="data">{data.game_rank}</td>
+                            <td className="data">{data.name}</td>
+                            <td className="data">{data.platform}</td>
+                            <td className="data">{data.year}</td>
+                            <td className="data">{data.genre}</td>
+                            <td className="data">{data.publisher}</td>
                             <td><button type="submit" value={data.id} onClick={handleSubmit}>Details</button></td>
                         </tr>)}
                 </tbody>
