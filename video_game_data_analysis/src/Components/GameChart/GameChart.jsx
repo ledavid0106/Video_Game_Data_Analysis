@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Chart } from "react-google-charts";
 import randomColor from "randomcolor";
 import './GameChart.css'
@@ -12,7 +12,7 @@ const GameChart = ({gamedata}) => {
             let platforms = filteredGames.map(game=> game.platform)
             let distinctPlatform = [...new Set(platforms)]
             let platformArrays = distinctPlatform.map(plat => {
-                let allGamesForPlatform = filteredGames.filter(game=> game.platform == plat)
+                let allGamesForPlatform = filteredGames.filter(game=> game.platform === plat)
                 // console.log(allGamesForPlatform)
                 let globalSale = 0
                 for (let i = 0; i < allGamesForPlatform.length;i++){
@@ -31,9 +31,10 @@ const GameChart = ({gamedata}) => {
 
     return ( 
 
-        <div>
+        <div className=' justify-content-center m-5 chart'>
         <h2>Global Sales By Console After 2012</h2> 
         <Chart
+            
             chartType="ColumnChart"
             data={getGlobalSales()}
             width="100%"

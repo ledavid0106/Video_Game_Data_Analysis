@@ -25,6 +25,9 @@ const SearchBar = ({searchdata, setSearchData, gamedata, getGameData}) => {
             if(data.publisher.includes(searchterm)){
                 return true
             }
+            else{
+                return false;
+            }
         })
         setSearchData(result)
     }

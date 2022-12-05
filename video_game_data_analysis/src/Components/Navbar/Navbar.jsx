@@ -4,7 +4,7 @@ const Navbar = (props) => {
     return (
         <div className='Nav'>
             <h1>
-                GAME DATA PRO
+                GAME DATA PRO ANALYSIS
             </h1>
         </div>
     )

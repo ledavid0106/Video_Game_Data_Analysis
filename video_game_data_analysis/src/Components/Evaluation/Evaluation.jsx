@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Chart } from "react-google-charts";
 
 const Evaluation = ({gamedata}) => {
@@ -9,7 +9,7 @@ const Evaluation = ({gamedata}) => {
         let platforms = filteredGames.map(game=> game.platform)
         let distinctPlatform = [...new Set(platforms)]
         let platformArrays = distinctPlatform.map(plat => {
-            let allGamesForPlatform = filteredGames.filter(game=> game.platform == plat)
+            let allGamesForPlatform = filteredGames.filter(game=> game.platform === plat)
             let japanSale = 0
             let globalSale = 0
             for (let i = 0; i < allGamesForPlatform.length;i++){
@@ -28,7 +28,7 @@ const Evaluation = ({gamedata}) => {
         
     return ( 
 
-        <div>
+        <div className=' justify-content-center m-5 chart'>
         <h2>Japan Sales Vs Global Sales By Console After 2012</h2> 
         <Chart
             chartType="ColumnChart"

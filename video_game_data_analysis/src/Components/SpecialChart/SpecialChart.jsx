@@ -1,5 +1,4 @@
 import { Chart } from "react-google-charts";
-import randomColor from "randomcolor";
 
 
 const SpecialChart = ({special}) => {
@@ -18,7 +17,7 @@ const SpecialChart = ({special}) => {
     
     return ( 
 
-        <div>
+        <div className=' justify-content-center m-5 chart'>
         <h2>Game Details</h2> {/* //please center later// */}
         <Chart
             chartType="ColumnChart"

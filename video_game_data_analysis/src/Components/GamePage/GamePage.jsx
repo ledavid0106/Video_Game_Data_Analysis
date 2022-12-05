@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import Evaluation from "../Evaluation/Evaluation";
 
 
-const GamePage = ({}) => {
+const GamePage = () => {
 
     const [gamedata, setGameData] = useState([])
     const [searchdata, setSearchData] = useState([])

@@ -1,3 +1,11 @@
 h2 {
     text-align: center;
 }
+
+.gamechart {
+    border-radius: 10px;
+    margin: 0%;
+    /* padding: ; */
+    /* padding: 1%; */
+    /* width: 600px; */
+}

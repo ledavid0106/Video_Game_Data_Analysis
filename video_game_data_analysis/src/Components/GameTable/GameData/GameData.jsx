@@ -40,15 +40,17 @@ const GameData = ({gamedata}) => {
     return (  
         <div>
         <SpecialChart special={special}/>
-        <table className="Container">
-                <thead className="headers">
-                    <tr >
+        <div className="Container">
+        <table className="table table-hover table-striped table-bordered table-sm table-light">
+                <thead className="thead-dark">
+                    <tr align="center">
                         <th className="GameRank">Game Rank</th>
                         <th className='Name'>Name</th>
                         <th className='Platform'>Platform</th> 
                         <th className='Year'>Year</th> 
                         <th className='Genre'>Genre</th> 
                         <th className="Publisher">Publisher</th>
+                        <th className="Publisher">Details</th>
                     </tr>
                 </thead>
                 <tbody >
@@ -64,6 +66,7 @@ const GameData = ({gamedata}) => {
                         </tr>)}
                 </tbody>
             </table>
+        </div>
         </div>
     );
 }
