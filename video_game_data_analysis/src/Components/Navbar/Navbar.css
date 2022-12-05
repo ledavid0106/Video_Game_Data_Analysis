@@ -1,7 +1,11 @@
 .Nav {
     margin: 10px;
-    display: flex;
+    margin-top: 0;
     padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
     justify-content: center;
+    background-color: aquamarine;
     /* position: relative; */
 }

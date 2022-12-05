@@ -1,6 +1,7 @@
 .Bar {
     position: absolute;
     left: 10%;
+    border-radius: 25px;
     /* top: 167.6%; */
     /* width: 17%; */
 }
